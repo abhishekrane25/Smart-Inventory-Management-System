@@ -31,6 +31,12 @@ public class MainMenu {
 				break;
 			}
 			
+			case 3:
+			{
+				System.out.println("Let's take a step back...");
+				return;
+			}
+			
 			default:
 			{
 				System.out.println(" Please enter a valid choice (1-2) ");

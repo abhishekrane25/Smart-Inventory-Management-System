@@ -15,7 +15,14 @@ public class ProductListMenu {
 			
 			while(true) {
 				
-				System.out.println(" 1. Add Product\n 2. View Product By Id\n 3. View All Products\n 4. Update Product by ID \n 5. Delete Product by ID \n Please enter your choice (1-5):\n");
+				System.out.println("1. Add Product");
+				System.out.println("2. View Product By ID");
+				System.out.println("3. View All Products");
+				System.out.println("4. Update Product by ID");
+				System.out.println("5. Delete Product by ID");
+				System.out.println("6. Return To Main-Menu ");
+				System.out.println(" Please enter your choice (1-5):");
+				
 				int choice = input.nextInt();
 				
 				switch (choice)
@@ -148,7 +155,15 @@ public class ProductListMenu {
 				break;
 				
 				}
+				
+				case 6:
+				{
 					
+					System.out.println("Returning To Main-Menu...");
+					return;
+					
+				}
+				
 				default:
 				{
 				
