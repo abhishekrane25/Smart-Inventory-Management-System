@@ -8,4 +8,8 @@ public interface IOrderService {
 	
 	String addOrder(Order order);
 	ArrayList <Order> viewOrders();
+	ArrayList <Order> viewOrderById();
+	String updateOrderById(Order order);
+	String deleteOrderById(Order order);
+	
 }

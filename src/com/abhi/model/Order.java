@@ -50,7 +50,7 @@ public class Order {
 	
 	@Override
 	public String toString() {
-		return "Order [orderId=" + orderId + ", supplierId=" + supplierId + ", productId=" + productId + ", orderDate="
+		return "Order \n [orderId=" + orderId + "\n supplierId=" + supplierId + "\n productId=" + productId + "\n orderDate="
 				+ orderDate + "]";
 	}
 	
