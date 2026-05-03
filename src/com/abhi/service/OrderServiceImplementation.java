@@ -1,5 +1,6 @@
 package com.abhi.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import com.abhi.model.Order;
@@ -45,16 +46,63 @@ public class OrderServiceImplementation implements IOrderService{
 	}
 
 	@Override
-	public String updateOrderById(Order order) {
-		// TODO Auto-generated method stub
-		return null;
+	public String updateOrderById(int orderId, int productId, int supplierId, LocalDateTime orderDate) {
+		
+		try {
+
+			for(Order o: orderList) {
+				if(o.getOrderId() == orderId) {
+					
+					if(productId>0) {
+						o.setProductId(productId);
+					}
+					else if(supplierId>0) {
+						o.setSupplierId(supplierId);
+					}
+					else if(orderDate != null) {
+						o.setOrderDate(orderDate);
+					}
+										
+					return "Order ID: "+orderId + " updated successfully";
+
+				}
+				else {
+
+					return "Order ID: "+orderId + " not found, please enter correct Order ID";
+					
+				}
+			}
+			
+			return null;
+			
+		}
+		catch(Exception e) {
+			return "Error: "+e.getMessage();
+		}
+		
 	}
 
 	@Override
-	public String deleteOrderById(Order order) {
-		// TODO Auto-generated method stub
-		return null;
+	public String deleteOrderById(int orderId) {
+		
+		try {
+			for(Order o: orderList) {
+				if(o.getOrderId() == orderId) {
+					orderList.remove(o);
+					return "Order ID: "+ orderId + " deleted successfully";
+				}
+			}
+			
+			return "Order ID: "+ orderId + " not found, please enter valid ID";
+			
+		}
+		
+		catch(Exception e) {
+			return "Error: "+ e;
+		}
 	}
+
+	
 	
 	
 	

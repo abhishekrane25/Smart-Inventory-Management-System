@@ -9,10 +9,12 @@ import com.abhi.service.ProductServiceImplementation;
 public class ProductListMenu {
 		
 		private Scanner input = new Scanner(System.in);
-		ProductServiceImplementation prodImpl = new ProductServiceImplementation();
 		
 		public void showMenu() {
-			
+
+			// Implementation Object for Product Class
+			ProductServiceImplementation prodImpl = new ProductServiceImplementation();
+
 			while(true) {
 				
 				System.out.println("1. Add Product");

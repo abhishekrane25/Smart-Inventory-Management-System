@@ -11,8 +11,9 @@ public class MainMenu {
 			
 			System.out.println("1. Product List Menu");
 			System.out.println("2. Order List Menu");
+			System.out.println("3. Exit the System");
 			
-			System.out.println(" Please enter your choice (1-2): ");
+			System.out.println(" Please enter your choice (1-3): ");
 			int choice = input.nextInt();
 			
 			switch(choice) {
@@ -33,8 +34,8 @@ public class MainMenu {
 			
 			case 3:
 			{
-				System.out.println("Let's take a step back...");
-				return;
+				System.out.println("Please Visit Us Again..! Have a Good Day! ");
+				System.exit(1);
 			}
 			
 			default:
